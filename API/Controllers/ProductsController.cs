@@ -6,6 +6,7 @@ using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
 using Infrastructure.Data;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -48,6 +49,10 @@ namespace API.Controllers
 
             return Ok(new Pagination<ProductToReturnDto>(productParams.PageIndex, productParams.PageSize, totalItems, data));
         }
+        // error Cors policy added code not from the udemy
+        [HttpGet]  
+        [Route("GetAllAuthor")]  
+        [EnableCors("AllowOrigin")] 
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
