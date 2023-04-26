@@ -8,7 +8,7 @@ import { ShopComponent } from './shop/shop.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule)},
+  {path: 'shop', loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule)}, //lazyload
   {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 
