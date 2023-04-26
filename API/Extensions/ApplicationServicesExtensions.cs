@@ -48,9 +48,9 @@ namespace API.Extensions
                 });
             });
             // error cors policy
-            //services.AddCors(c =>  {  
-            //    c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());  
-            //});
+            services.AddCors(c =>  {  
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());  
+            });
 
 
             return services;

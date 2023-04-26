@@ -27,7 +27,7 @@ app.UseStaticFiles();
 
 app.UseCors("CorsPolicy");
 //error cors policy
-//app.UseCors(options => options.AllowAnyOrigin());  
+app.UseCors(options => options.AllowAnyOrigin());  
 app.UseAuthorization();
 
 app.MapControllers();
